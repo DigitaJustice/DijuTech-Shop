@@ -1,0 +1,36 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+.bg-gradientClr{
+  background-image: linear-gradient(to right,#1c2e31 , #00b0b6);
+  /* background-image: linear-gradient(rgb(90, 162, 196), rgb(73, 73, 73) ); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
